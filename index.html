@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GIF Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="top-bar">
+      <div class="brand">
+      
+        <span class="brand-name">GIF Explorer</span>
+      </div>
+      <nav class="top-actions" aria-label="Account">
+        <button class="link-button" type="button">Upload</button>
+        <button class="link-button" type="button">Log in</button>
+        <button class="pill-button" type="button">Sign Up</button>
+      </nav>
+    </header>
+
+    <section class="search-area" aria-label="Search GIFs">
+      <div class="search-bar">
+        <span class="search-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
+          </svg>
+        </span>
+        <input id="search_bar" type="search" name="search" autocomplete="off" placeholder="Search for GIFs..." />
+        <button id="inputButton" class="icon-button" type="button" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="tag-row">
+        <button class="tag active" type="button" data-term="trending">#trending</button>
+        <button class="tag" type="button" data-term="funny">#funny</button>
+        <button class="tag" type="button" data-term="gaming">#gaming</button>
+        <button class="tag" type="button" data-term="music">#music</button>
+        <button class="tag" type="button" data-term="reactions">#reactions</button>
+        <button class="tag" type="button" data-term="developer">#developer</button>
+        <button class="tag" type="button" data-term="code">#code</button>
+      </div>
+    </section>
+
+    <main class="gallery-shell">
+      <div class="cards" id="gallery">
+        <div class="gallery-message">Loading GIFs...</div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <div class="brand-mark small" aria-hidden="true">
+          <span class="brand-dot"></span>
+        </div>
+        <span class="brand-name muted">GIF Explorer © 2024</span>
+      </div>
+      <div class="footer-links">
+        <a href="#" class="footer-link">Privacy</a>
+        <a href="#" class="footer-link">Terms</a>
+        <a href="#" class="footer-link">API</a>
+        <a href="#" class="footer-link">About</a>
+      </div>
+    </footer>
+  </div>
+  <script src="js/config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
