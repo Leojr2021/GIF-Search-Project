@@ -51,12 +51,16 @@ const fetchGifs = async (term) => {
           term
         )}&api_key=${API_KEY}&limit=${LIMIT}`;
 
-  const response = await fetch(endpoint);
-  if (!response.ok) {
-    throw new Error("Unable to fetch GIFs");
+  // Use axios (loaded from CDN) for HTTP requests
+  const response = await axios.get(endpoint);
+  const data = response?.data?.data;
+
+  // Explicitly throw when the API schema is not what we expect
+  if (!Array.isArray(data)) {
+    throw new Error("Unexpected API response shape");
   }
-  const json = await response.json();
-  return json?.data ?? [];
+
+  return data;
 };
 
 const setActiveTag = (term) => {
